@@ -5,6 +5,8 @@ deploy:
     setupVariables:
       after:
         - npm i
+    pulumiLogin:
+      after:
         - pulumi config set aws:region us-east-1
 
 destroy:
@@ -12,4 +14,6 @@ destroy:
     setupVariables:
       after:
         - npm i
-        - pulumi config set aws:region us-east-1        
+    pulumiLogin:
+      after:
+        - pulumi config set aws:region us-east-1
