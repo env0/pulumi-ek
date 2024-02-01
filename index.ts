@@ -14,3 +14,4 @@ const cluster = new eks.Cluster(name, {
     }});
 
 export const clusterName = cluster.eksCluster.name;
+export const kubeconfig = cluster.kubeconfig;
