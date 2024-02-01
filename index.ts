@@ -5,6 +5,7 @@ let name = "k8s-templates-integration-tests";
 const cluster = new eks.Cluster(name, {
     name,
     minSize: 1,
+    desiredCapacity: 1,
     maxSize: 1,
     instanceType: "t4g.nano",
     clusterTags: {
