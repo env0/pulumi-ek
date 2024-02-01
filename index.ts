@@ -4,6 +4,9 @@ import * as eks from "@pulumi/eks";
 let name = "k8s-templates-integration-tests";
 const cluster = new eks.Cluster(name, {
     name,
+    minSize: 1,
+    maxSize: 1,
+    instanceType: "t4g.nano",
     clusterTags: {
         owner: "RND",
         DO_NOT_DELETE: "DO_NOT_DELETE",
